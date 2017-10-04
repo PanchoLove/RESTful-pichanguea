@@ -1,4 +1,6 @@
-package principal.Jugador;
+package principal.Retornos;
+
+import principal.Jugador.Jugador;
 
 public class JugadorToken {
     Jugador jug;

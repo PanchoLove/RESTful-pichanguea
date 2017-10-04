@@ -3,7 +3,7 @@ package principal.Jugador;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import principal.Greeting.Greeting;
+import principal.Retornos.JugadorToken;
 
 @RestController
 public class ControladorJugador {
@@ -13,7 +13,7 @@ public class ControladorJugador {
     Jugador jug1 = new Jugador();
 
     @RequestMapping(value = "/crearUsuario", method = RequestMethod.POST)
-    public ResponseEntity<JugadorToken> crearUsuario(@RequestBody Jugador jug) {
+    public ResponseEntity<JugadorToken> crearUsuario(@RequestBody Jugador jugador) {
         //Comprobar datos
         //Mandar solicitud a la BD
         //generar token
@@ -21,8 +21,7 @@ public class ControladorJugador {
         //retornar
         if (true) //si todo sale bien
         {
-            jug1 = jug;
-            jug1.setClave("***");
+            jug1 = jugador;
             jt.setJug(jug1);
             jt.setToken(tok);
             return new ResponseEntity<JugadorToken>(jt, HttpStatus.CREATED);
@@ -39,7 +38,7 @@ public class ControladorJugador {
         //Mandar solicitud a la BD
         //retornar
 
-        return new Jugador("a","a","a","a","a","a","a","a","a","a");
+        return new Jugador(1,"a","a","a","a","a","a","a","a","a","a");
     }
 
 }

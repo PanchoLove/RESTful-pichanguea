@@ -2,6 +2,7 @@ package principal.Jugador;
 
 public class Jugador {
 
+    private int Id;
     private String nombreUsuario;
     private String clave;
     private String rutSinDigito;
@@ -15,6 +16,7 @@ public class Jugador {
 
 
     public Jugador() {
+        this.Id = -1;
         this.nombreUsuario = null;
         this.clave = null;
         this.rutSinDigito = null;
@@ -27,7 +29,8 @@ public class Jugador {
         this.apodo = null;
     }
 
-    public Jugador(String nombreUsuario, String clave, String rutSinDigito, String rutConDigito, String nombre, String paterno, String materno, String celular, String mail, String apodo) {
+    public Jugador(int Id, String nombreUsuario, String clave, String rutSinDigito, String rutConDigito, String nombre, String paterno, String materno, String celular, String mail, String apodo) {
+        this.Id = Id;
         this.nombreUsuario = nombreUsuario;
         this.clave = clave;
         this.rutSinDigito = rutSinDigito;
@@ -43,6 +46,11 @@ public class Jugador {
     public void setClave(String clave) {
         this.clave = clave;
     }
+
+    public int getId() {
+        return Id;
+    }
+
 
     public String getNombreUsuario() {
         return nombreUsuario;
