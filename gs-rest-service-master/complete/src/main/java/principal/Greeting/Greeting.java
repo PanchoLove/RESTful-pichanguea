@@ -1,4 +1,4 @@
-package hello;
+package principal.Greeting;
 
 public class Greeting {
 
