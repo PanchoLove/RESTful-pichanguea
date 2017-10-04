@@ -14,6 +14,19 @@ public class Jugador {
     private String apodo;
 
 
+    public Jugador() {
+        this.nombreUsuario = null;
+        this.clave = null;
+        this.rutSinDigito = null;
+        this.rutConDigito = null;
+        this.nombre = null;
+        this.paterno = null;
+        this.materno = null;
+        this.celular = null;
+        this.mail = null;
+        this.apodo = null;
+    }
+
     public Jugador(String nombreUsuario, String clave, String rutSinDigito, String rutConDigito, String nombre, String paterno, String materno, String celular, String mail, String apodo) {
         this.nombreUsuario = nombreUsuario;
         this.clave = clave;
@@ -25,6 +38,10 @@ public class Jugador {
         this.celular = celular;
         this.mail = mail;
         this.apodo = apodo;
+    }
+
+    public void setClave(String clave) {
+        this.clave = clave;
     }
 
     public String getNombreUsuario() {
