@@ -60,11 +60,6 @@ public class ControladorEquipo {
         return agregarEquipoBD(nuevo);
     }
 
-    @RequestMapping("/paja")
-    @ResponseBody public Equipo paja(){
-        return equipoRandom();
-    }
-
 
 
     /********************** supuesta comunicacion con la base de datos****************/
