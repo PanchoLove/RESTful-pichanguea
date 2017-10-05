@@ -2,7 +2,7 @@
 
 ##contenidos
 
-- [Instrucciones de instalación y ejecución](#nstrucciones-de-instalación-y-ejecución]
+- [Instrucciones de instalación y ejecución](#instrucciones-de-instalación-y-ejecución]
 -[Lista de funciones](#lista-de-funciones)
  -[/Crear Usuario](#/crear-usuario)
  -[/Sesion](#/sesion)
