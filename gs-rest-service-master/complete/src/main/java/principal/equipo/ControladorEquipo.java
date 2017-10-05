@@ -36,6 +36,7 @@ public class ControladorEquipo {
         }
     }
 
+    //agregar obtener equipo por id
     @RequestMapping("/equipo")
     public Equipo equipoPorNombre(@RequestParam(value="nombreEquipo", defaultValue="") String nombreEquipo ,
                                          @RequestParam(value="idJugador", defaultValue="-1") int idJugador

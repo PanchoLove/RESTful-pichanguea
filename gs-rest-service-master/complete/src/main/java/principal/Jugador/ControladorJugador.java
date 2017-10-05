@@ -17,6 +17,9 @@ public class ControladorJugador {
   JugadorToken jt = new JugadorToken();
   Jugador jug1 = new Jugador();
 
+
+
+
   @RequestMapping(value = "/crearUsuario", method = RequestMethod.POST)
   public ResponseEntity<JugadorToken> crearUsuario(@RequestBody Jugador jugador) {
     //Comprobar datos
@@ -35,6 +38,18 @@ public class ControladorJugador {
     jt.setJug(jug1);
     return new ResponseEntity<JugadorToken>(jt,HttpStatus.BAD_REQUEST);
   }
+
+  @RequestMapping(value = "/jugador", method = RequestMethod.POST)
+  public JugadorToken crearJugador(@RequestBody Jugador jugador){
+
+
+    JugadorToken jugtk= new JugadorToken();
+    jugtk.setJug(jugador);
+    jugtk.setToken("holasoyuntoken:D");
+    return jugtk;
+  }
+
+
 
 
 
