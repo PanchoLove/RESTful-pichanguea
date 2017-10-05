@@ -10,7 +10,8 @@
 3. Una vez en la carpeta ejecutar "./gradlew bootRun" (linux) o "gradlew.bat bootRun" (windows).
 4. El servicio es accesible desde "localhost:8080/" , para probar que efectivamente esta funcionando se puede acceder a "localhost:8080/greeting" que entregara un hola mundo de respuesta.
 
-##Lista de funciones
+## Lista de funciones
+
 De momento el servicio no esta conectado a la base de datos asi que solo rentrega datos aleatories. De momento tampoco se ha implementado el uso de tokens.
 
 ### /Crear Usuario
@@ -59,7 +60,8 @@ Respuesta (ejemplo):
 }
 ```
 
-###/sesion
+### /sesion
+
 funcion para el inicio de sesion, retorna un json con el jugador que representa al usuario, la lista de partidos de esta, la lista de equipos y un token.
 
 @GET: ``` /sesion?usuario=(usuario sin parentesis)&pass=(pass sin parentesis) ```
@@ -106,11 +108,11 @@ obtener una lista de jugadores que coincidan con el nombre buscado
 
 #### obtener un equipo por su id
 
-@GET : ```/equipo?idEquipo=(id del equipo sin parentesis)
+@GET : ```/equipo?idEquipo=(id del equipo sin parentesis)```
 (retorna el equipo)
 
 
-@GET : ```/equipos?idEquipo=(id del equipo sin parentesis)
+@GET : ```/equipos?idEquipo=(id del equipo sin parentesis)```
 (realiza lo mismo que el metodo singular pero devuelve el partido dentro de una lista)
 
 ####crear un equipo
