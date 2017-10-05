@@ -38,13 +38,18 @@ public class ControladorEquipo {
 
     //agregar obtener equipo por id
     @RequestMapping("/equipo")
-    public Equipo equipoPorNombre(@RequestParam(value="nombreEquipo", defaultValue="") String nombreEquipo ,
-                                         @RequestParam(value="idJugador", defaultValue="-1") int idJugador
+    public Equipo equipoPorNombre(@RequestParam(value="nombreEquipo", defaultValue="") String nombreEquipo,
+                                  @RequestParam(value="idJugador", defaultValue="-1") int idJugador,
+                                  @RequestParam(value="idEquipo", defaultValue="-1") int idEquipo
     ){
-        if(nombreEquipo.equals("")){
-            return null;
-        }else{
-            return equipoPorNombreBD(nombreEquipo);
+        if(idEquipo!=-1) {
+            return equipoRandomAsId(idEquipo);
+        }else {
+            if (nombreEquipo.equals("")) {
+                return null;
+            } else {
+                return equipoPorNombreBD(nombreEquipo);
+            }
         }
     }
 
@@ -98,6 +103,10 @@ public class ControladorEquipo {
         return e;
     }
 
+    public Equipo equipoPorIdEquipo(int id){
+        return equipoRandomAsId(id);
+    }
+
     //****** trucherio****//
 
     public Equipo equipoRandom(){
@@ -114,6 +123,23 @@ public class ControladorEquipo {
                 String.valueOf((int)(Math.random() * 2000)+1)
                 ,new Date()
                 );
+    }
+
+    public Equipo equipoRandomAsId(int
+                                           id){
+
+
+        return new Equipo(id,
+                String.valueOf((int)(Math.random() * 2000)+1),
+                String.valueOf((int)(Math.random() * 2000)+1),
+                String.valueOf((int)(Math.random() * 2000)+1),
+                String.valueOf((int)(Math.random() * 2000)+1),
+                String.valueOf((int)(Math.random() * 2000)+1),
+                String.valueOf((int)(Math.random() * 2000)+1),
+                String.valueOf((int)(Math.random() * 2000)+1),
+                String.valueOf((int)(Math.random() * 2000)+1)
+                ,new Date()
+        );
     }
 
 
