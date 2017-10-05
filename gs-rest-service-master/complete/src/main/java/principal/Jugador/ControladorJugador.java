@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import principal.Greeting.Greeting;
 import principal.Retornos.JugadorToken;
+import principal.equipo.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +37,13 @@ public class ControladorJugador {
   }
 
 
+
+  @RequestMapping(value = "/test", method = RequestMethod.POST)
+  @ResponseBody public Jugador test(@RequestBody Test t) {
+    return jugadorRandomAsNombre(t.getData());
+  }
+
+
   @RequestMapping(value = "/crear", method = RequestMethod.GET)
   public Jugador crear() {
     //Comprobar datos
@@ -57,12 +65,7 @@ public class ControladorJugador {
     return obtenerJugadorPorNombreBD();
   }*/
 
-  @RequestMapping(value = "/generate", method = RequestMethod.GET)
-  @ResponseBody public List<Jugador> generate() {
 
-    return jugadoresPorNombreBD("sdas");
-
-  }
 
   @RequestMapping("/jugadores")
   @ResponseBody public List<Jugador> jugadoresPorNombreOId(@RequestParam(value="nombreEquipo", defaultValue="") String nombreEquipo ,
