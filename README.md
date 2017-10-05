@@ -23,7 +23,7 @@ Metodo: POST
 
 headers: ```("Content-Type", "application/json")```
 
-Body (ejemplo):
+Objeto json a enviar en el post (ejemplo):
 ```
    {
         "nombreUsuario": "sadsad",
@@ -80,7 +80,7 @@ se pueden enviar exactamente los mimos parametros de /crearJugador a la funcion 
 (retorna un objeto jugador con el id)
 
 @GET: ``` /jugadores?id=(aqui va la id del jugador sin parentesis ni nada) ```
-(retorna una lista con solo un jugador)
+(retorna el mismo objeto pero dentro de una lista)
 
 #### obtener jugadores por nombre
 obtener una lista de jugadores que coincidan con el nombre buscado 
@@ -89,7 +89,7 @@ obtener una lista de jugadores que coincidan con el nombre buscado
  (retorna una lista de jugadores que coincidan con el nombre).
 
 @GET: ``` /jugadore?nombreJugador=(nombre del jugador sin comillas ni nada)``` 
-(retorna el primer jugador que se encuentre con el nombre indicado).
+(retorna el primer jugador que se coincida con el nombre indicado).
 
 ### /equipo y /equipos
 
@@ -113,13 +113,14 @@ obtener una lista de jugadores que coincidan con el nombre buscado
 
 
 @GET : ```/equipos?idEquipo=(id del equipo sin parentesis)```
-(realiza lo mismo que el metodo singular pero devuelve el partido dentro de una lista)
+(retorna el mismo equipo en una lista)
 
-####crear un equipo
+#### crear un equipo
 
 @POST ```/equipo```
 
-body (ejemplo): ```{
+
+Objeto json a enviar en el post (ejemplo) : ```{
     "nombre": "1535",
     "descripcion": "1078",
     "url": "1687",
