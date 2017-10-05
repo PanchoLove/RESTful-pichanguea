@@ -1,11 +1,5 @@
 # RESTful-pichanguea
 
-##contenidos
-<!-- toc -->
-
-- [Instrucciones de instalación y ejecución](#Instrucciones de instalación y ejecución)
-
-<!-- tocstop -->
 
 
 ## Instrucciones de instalación y ejecución
@@ -25,10 +19,22 @@ Se recomienda que todas las llamadas al servicio se realicen incluyendo el heade
 
 (o al menos los @POST)
 
+las funciones que se pueden realizar son:
+
+- crear un nuevo Usuario
+- iniciar sesion
+- obtener un jugador por su id
+- obtener jugadores por nombre
+- buscar equipos por nombre
+- obtener los equipos de un jugador
+- obtener un equipo por su id
+- crear un equipo
+- invitar a un jugador a un equipo
+- Responder una invitacion (aceptar o rechazar)
 
 
 
-### /Crear Usuario
+### /CrearUsuario
 
 Recibe un objeto Json de tipo usuario y crea un usuario cualquiera, retorna el mismo usuario en caso de ser aceptado. No deberia estar implementado con ese nombre (existe una funcion similar en /jugador) pero se deja por si resulata mas comodo.
 
