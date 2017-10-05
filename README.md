@@ -2,6 +2,7 @@
 
 ##contenidos
 
+<!-- toc -->
 - [Instrucciones de instalación y ejecución](#instrucciones-de-instalación-y-ejecución]
 -[Lista de funciones](#lista-de-funciones)
  -[/Crear Usuario](#/crear-usuario)
