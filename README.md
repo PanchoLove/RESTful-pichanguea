@@ -1,6 +1,10 @@
 # RESTful-pichanguea
 
-##contenidos
+<!-- toc -->
+
+- [Instrucciones de instalación y ejecución](#Instrucciones de instalación y ejecución)
+
+<!-- tocstop -->
 
 
 ## Instrucciones de instalación y ejecución
@@ -14,14 +18,21 @@
 
 De momento el servicio no esta conectado a la base de datos asi que solo rentrega datos aleatories. De momento tampoco se ha implementado el uso de tokens.
 
+Se recomienda que todas las llamadas al servicio se realicen incluyendo el header:
+
+```("Content-Type", "application/json")``` 
+
+(o al menos los @POST)
+
+
+
+
 ### /Crear Usuario
 
 Recibe un objeto Json de tipo usuario y crea un usuario cualquiera, retorna el mismo usuario en caso de ser aceptado. No deberia estar implementado con ese nombre (existe una funcion similar en /jugador) pero se deja por si resulata mas comodo.
 
-Url: ```/crearUsuario```
-Metodo: POST
+@POST : ```/crearUsuario```
 
-headers: ```("Content-Type", "application/json")```
 
 Objeto json a enviar en el post (ejemplo):
 ```
@@ -36,7 +47,6 @@ Objeto json a enviar en el post (ejemplo):
         "celular": "1995",
         "mail": "842",
         "apodo": "949",
-        "id": 1
     }
 ```
 
@@ -150,6 +160,5 @@ un objeto de tipo invitacion en caso de ser exitoso
 @PUT ```/invitacionEquipo?idInvitacion=(id de invitacion)&respuesta=(0 o 1)```
 
 (o si se rechaza la invitacion, 1 si se acepta)
-
 
 
