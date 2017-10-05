@@ -83,12 +83,12 @@ public class ControladorJugador {
 
 
   @RequestMapping("/jugadores")
-  @ResponseBody public List<Jugador> jugadoresPorNombreOId(@RequestParam(value="nombreEquipo", defaultValue="") String nombreEquipo ,
+  @ResponseBody public List<Jugador> jugadoresPorNombreOId(@RequestParam(value="nombreJugador", defaultValue="") String nombreJugador ,
                                                         @RequestParam(value="idJugador", defaultValue="-1") int idJugador
                                                         ) {
     if(idJugador==-1){
-      if(!(nombreEquipo.equals(""))) {
-        return jugadoresPorNombreBD(nombreEquipo);
+      if(!(nombreJugador.equals(""))) {
+        return jugadoresPorNombreBD(nombreJugador);
       }
       else
         return new ArrayList<Jugador>();
@@ -102,12 +102,15 @@ public class ControladorJugador {
   }
 
   @RequestMapping("/jugador")
-  @ResponseBody Jugador jugadorPorId(@RequestParam(value="id", defaultValue="-1") int id){
+  @ResponseBody Jugador jugadorPorId(@RequestParam(value="idJugador", defaultValue="-1") int idJugador ,
+                                    @RequestParam(value ="nombreJugador", defaultValue = "")String nombreJugador){
 
-    if(id==-1){
+    if(idJugador==-1 && nombreJugador.equals("")){
       return null;
     }
-    return jugadorPorIdBD(id);
+    if(idJugador!=-1){
+    return jugadorPorIdBD(idJugador);}
+    else{return  jugadorRandomAsNombre(nombreJugador);}
   }
 
 

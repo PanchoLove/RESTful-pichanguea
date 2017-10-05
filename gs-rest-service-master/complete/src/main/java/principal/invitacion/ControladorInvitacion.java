@@ -9,7 +9,7 @@ public class ControladorInvitacion {
 
     /****************declaracion de contratos************************/
 
-    @RequestMapping(value = "/invitacion", method = RequestMethod.POST)
+    @RequestMapping(value = "/invitacionEquipo", method = RequestMethod.POST)
     @ResponseBody
     public Invitacion invitarJugadorEquipo(@RequestParam(value ="idEquipo", defaultValue = "-1" ) int idEquipo,
                                            @RequestParam(value ="idJugador" , defaultValue="-1") int idJugador) {
@@ -21,7 +21,7 @@ public class ControladorInvitacion {
         return null;
     }
 
-    @RequestMapping(value = "/invitacion", method =  RequestMethod.PUT)
+    @RequestMapping(value = "/invitacionEquipo", method =  RequestMethod.PUT)
     @ResponseBody
     public String accepted(@RequestParam(value="idInvitacion",defaultValue = "-1") int idInvitacion,
                            @RequestParam(value="respuesta",defaultValue="-1") int respuesta ){

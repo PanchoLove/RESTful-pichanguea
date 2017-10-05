@@ -60,6 +60,11 @@ public class ControladorEquipo {
         return agregarEquipoBD(nuevo);
     }
 
+    @RequestMapping(value = "/equipos",method = RequestMethod.POST)
+    @ResponseBody Equipo crearEquipos(@RequestBody Equipo nuevo){
+
+        return agregarEquipoBD(nuevo);
+    }
 
 
     /********************** supuesta comunicacion con la base de datos****************/
