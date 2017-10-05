@@ -4,14 +4,25 @@ import java.util.Date;
 
 public class Invitacion {
 
-    //int id ;
+    int id ;
     int idEquipo;
     int idJugador;
     String estado;
     String creacion;
     String modificacion;
 
+    public Invitacion(int id ,int idEquipo, int idJugador, String estado, String creacion, String modificacion) {
+        this.id=id;
+        this.idEquipo = idEquipo;
+        this.idJugador = idJugador;
+        this.estado = estado;
+        this.creacion = creacion;
+        this.modificacion = modificacion;
+    }
+
+
     public Invitacion(int idEquipo, int idJugador, String estado, String creacion, String modificacion) {
+
         this.idEquipo = idEquipo;
         this.idJugador = idJugador;
         this.estado = estado;
@@ -24,6 +35,7 @@ public class Invitacion {
     public int getIdEquipo() {
         return idEquipo;
     }
+
 
     public int getIdJugador() {
         return idJugador;

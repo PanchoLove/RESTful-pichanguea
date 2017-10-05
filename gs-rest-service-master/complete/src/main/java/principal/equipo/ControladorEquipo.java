@@ -1,9 +1,6 @@
 package principal.equipo;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import principal.Jugador.Jugador;
 
 import java.util.ArrayList;
@@ -50,8 +47,17 @@ public class ControladorEquipo {
         }
     }
 
-    
 
+    @RequestMapping(value = "/equipo",method = RequestMethod.POST)
+    @ResponseBody Equipo crearEquipo(@RequestBody Equipo nuevo){
+
+        return agregarEquipoBD(nuevo);
+    }
+
+    @RequestMapping("/paja")
+    @ResponseBody public Equipo paja(){
+        return equipoRandom();
+    }
 
 
 
@@ -85,6 +91,10 @@ public class ControladorEquipo {
     
     public Equipo equipoPorNombreBD(String nombre){
         return equipoRandomAsnombre(nombre);
+    }
+
+    public  Equipo agregarEquipoBD(Equipo e){
+        return e;
     }
 
     //****** trucherio****//

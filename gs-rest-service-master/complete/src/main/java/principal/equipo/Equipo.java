@@ -16,6 +16,8 @@ public class Equipo {
     String contactoMail;
     Date creacion;
 
+    public Equipo(){}
+
     public Equipo(int id, String nombre, String descripcion, String url, String email, String contacto, String contactoFono, String contactoCelular, String contactoMail, Date creacion) {
         this.id = id;
         this.nombre = nombre;
@@ -67,5 +69,45 @@ public class Equipo {
 
     public Date getCreacion() {
         return creacion;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setContacto(String contacto) {
+        this.contacto = contacto;
+    }
+
+    public void setContactoFono(String contactoFono) {
+        this.contactoFono = contactoFono;
+    }
+
+    public void setContactoCelular(String contactoCelular) {
+        this.contactoCelular = contactoCelular;
+    }
+
+    public void setContactoMail(String contactoMail) {
+        this.contactoMail = contactoMail;
+    }
+
+    public void setCreacion(Date creacion) {
+        this.creacion = creacion;
     }
 }
