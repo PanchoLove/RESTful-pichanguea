@@ -109,6 +109,7 @@ public class ControladorEquipo {
 
     //****** trucherio****//
 
+
     public Equipo equipoRandom(){
 
 

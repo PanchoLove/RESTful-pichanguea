@@ -146,8 +146,70 @@ public class ControladorJugador {
   }
 
   //****** trucherio****//
-  public Jugador jugadorRandom(){
 
+
+  public static  final String nombres[]  = {"rodrigo",
+                        "juan",
+                        "hector",
+                        "mauricio",
+                        "franco",
+                        "francisco",
+                        "javiera",
+                        "diego",
+                        "gustavo",
+                        "huenseslao"};
+
+  public static  final String paternos[]  = {"rodriguez",
+          "poblete",
+          "ruiz",
+          "cardenaz",
+          "romero",
+          "coccio",
+          "undurraga",
+          "riquelme",
+          "quiroga",
+          "perez"};
+
+  public static  final String maternos[]  = {"flores",
+          "perez",
+          "olmos",
+          "oliva",
+          "rivero",
+          "leyva",
+          "acuña",
+          "camirioaga",
+          "espinoza",
+          "gonzales"};
+
+
+  public static  final String celulares[]  = {"+56994060942",
+          "+56923432442",
+          "+56994060939",
+          "+56994060239",
+          "+56994060323",
+          "+56994060932",
+          "+56994060943",
+          "+56994060943",
+          "+56994060949",
+          "+56994060909"};
+
+  public static  final String claves[]  = {"***",
+          "***",
+          "***",
+          "***",
+          "***",
+          "***",
+          "***",
+          "***",
+          "***",
+          "***"};
+
+
+
+
+
+
+  public Jugador jugadorRandom(){
 
     return new Jugador(1,
             String.valueOf((int)(Math.random() * 2000)+1),
